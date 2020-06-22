@@ -18,14 +18,14 @@ class Details extends Component {
         const i=this.props.match.params.i
 		axios.get("http://localhost:3001/campgrounds/"+i).
 		then(response=>{
-            console.log(response)
+            
 			this.setState({desc:response.data,comment:response.data.comment})
 			console.log(this.state.comment)
         })
         .catch(error=>{
             console.log(error)
         })
-        // this.setState({a:this.props.match.params.id})
+        
     }
 
 	
@@ -38,9 +38,7 @@ class Details extends Component {
             .catch(err=>console.log(err))
 		}
 		
-		// edit=()=>{
-		// 	return <Update camp={this.state.desc} />
-		// }
+		
 	
    render() {
 	   if(this.state.del){
@@ -48,7 +46,7 @@ class Details extends Component {
 	   }
 	   else{
 		const {desc,comment}=this.state
-		// const c=desc.comment
+		
         return (
             <React.Fragment>
 
@@ -78,10 +76,7 @@ class Details extends Component {
 							{desc.description}
 							
 					</p>
-					{/* <p>
-						<em>This Campground is registered by <strong><%=desc.author.username%></strong></em>
-					</p> */}
-					{/* <%if(currentUser && desc.author.id.equals(currentUser._id)){%> */}
+					
 					<p>
 						<a href={`/campgrounds/edit/${desc._id}/${desc.name}/${desc.description}`} className="btn btn-primary">EDIT</a>
 				    </p> 
@@ -90,7 +85,7 @@ class Details extends Component {
 							DELETE
 						</a>
 					 
-					{/* <%}%> */}
+					
 				</div>
 			</div>
 			<div className="well">
