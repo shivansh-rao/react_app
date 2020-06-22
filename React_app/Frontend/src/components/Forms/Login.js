@@ -17,17 +17,11 @@ import {Redirect,Router,Route} from 'react-router-dom'
      }
      login=(f)=>{
             f.preventDefault()
-            // const user={
-            //     username:this.state.username,
-            //     password:this.state.password
-            // }
+            
             this.props._login(this.state.username, this.state.password);
-            // this.setState({Logged:true})
+          
      }
-    //  componentDidMount=()=>{
-    //     if(this.props.user)
-    //     this.setState({Logged:true})
-    //  }
+    
         
     render() {
         if(this.props.logged)
