@@ -17,7 +17,7 @@ var Campground=require('./model/camp.js');
 var Comment=require('./model/comment.js');
 var User=require('./model/User.js');
 var mongoose =require('mongoose');
-mongoose.connect("mongodb+srv://shivansh:shivansh@cluster0-fpqlm.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://username:password@cluster0-fpqlm.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology: true});
 mongoose.connection.once('open',()=>{
   console.log("mongoDbs connected");
 });
