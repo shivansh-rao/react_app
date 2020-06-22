@@ -25,17 +25,14 @@ export class New extends Component {
                 };
          console.log(n);
         axios.post("http://localhost:3001/campgrounds/new",n)
-        .then(res=>{console.log("added");
+        .then(res=>{
         return this.setState({added:true})})
         .catch(err=>console.log(err));
 }
     
     render() 
     {
-        // if(!this.props.loggedIn)
-        // {return <Redirect to='/login'/>}
-        // else
-        // {
+        
         if(this.state.added){
             return <Redirect to='/campgrounds'/>
         }
